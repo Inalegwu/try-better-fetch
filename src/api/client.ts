@@ -15,7 +15,7 @@ const todoInput = z.object({
 
 const schema = createSchema({
   "/todos": {
-    output: todoOutput,
+    output: z.array(todoOutput),
   },
   "/todo": {
     input: todoInput,
