@@ -19,6 +19,7 @@ require("dotenv").config({
 // schema for our client environment to be validated
 const client = z.object({
   APP_ENV: z.enum(["development", "staging", "production"]),
+  EXPO_PUBLIC_API_URL: z.string().url(),
 });
 
 const buildTime = z.object({});
